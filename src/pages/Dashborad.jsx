@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Dashboard.css";
 
 // components
 import { Sidebar, Topbar, PrimaryButton } from "../components";
-import assets from "../assets";
+import Task from "../components/common/Task/Task";
 
 const Dashboard = () => {
+  const [displayMenu, setDisplayMenu] = useState(false);
+
   return (
-    <div className="dashboardContainer sidebarOpen">
-      <Sidebar />
+    <div
+      className={`dashboardContainer ${
+        displayMenu ? "sidebarOpen" : "sidebarClosed"
+      }`}
+    >
+      <Sidebar displayMenu={displayMenu} />
       <section className="mainContainer">
-        <Topbar />
+        <Topbar displayMenu={displayMenu} setDisplayMenu={setDisplayMenu} />
         <div className="mainContent">
           <div className="mainHeader">
             <h1 style={{ fontSize: "2rem" }}>Title of the List </h1>
@@ -19,17 +25,18 @@ const Dashboard = () => {
               <PrimaryButton />
             </div>
           </div>
-          <div className="taskContainer" title="Hello Everyone">
-            <p>Hello Everyone Hello Everyone</p>
-            <div className="taskButtonContainer">
-              <button className="completedButton">
-                <img src={assets.check} alt="completed" />
-              </button>
-              <button className="deleteButton">
-                <img src={assets.deleteBlack} alt="delete" />
-              </button>
-            </div>
-          </div>
+          <Task title="Complete all the MERN Course Videos by 21-May-2018" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
+          <Task title="Something else that I wanted to do but was not able to do becuase I was attending the meetings" />
         </div>
       </section>
     </div>
