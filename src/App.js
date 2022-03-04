@@ -1,9 +1,15 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+// pages
+import Dashboard from "./pages/Dashborad";
 
 function App() {
   return (
     <div className="App">
-      <h1>Tasky App</h1>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
     </div>
   );
 }

@@ -1,21 +1,10 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Tasky",
+  "name": "Simple react application to take notes.",
   "icons": [
     {
       "src": "notesSelected.png",
-      "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
-    },
-    {
-      "src": "notesSelected.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "notesSelected.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ],
   "start_url": ".",

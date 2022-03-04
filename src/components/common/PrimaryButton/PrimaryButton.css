@@ -1,0 +1,14 @@
+.primaryButtonContainer {
+  padding: 1rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  cursor: pointer;
+}
+
+.primaryButtonContainer img {
+  width: 1rem;
+  height: 1rem;
+}

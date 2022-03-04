@@ -1,0 +1,36 @@
+.seachInputContainer {
+  background: var(--background-color);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  min-height: 40px;
+}
+
+.seachInputContainer > input {
+  font-family: var(--poppins-font);
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.seachInputContainer button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+}
+
+.seachInputContainer img {
+  height: 15px;
+  width: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .seachInputContainer {
+    display: none;
+  }
+}

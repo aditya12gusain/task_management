@@ -1,0 +1,58 @@
+.topbarContainer {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.menuButton {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+}
+
+.menuButton > img {
+  width: 20px;
+  height: 20px;
+}
+
+.topbarRightContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.userInfoConatiner {
+  text-align: right;
+}
+
+.userInfoConatiner h4 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.userInfoConatiner p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  color: #8f8f8f;
+}
+
+.userProfileImage > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #faf5ff;
+}
+
+@media screen and (max-width: 768px) {
+  .topbarContainer {
+    padding: 0 1rem;
+  }
+}
