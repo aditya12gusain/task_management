@@ -1,0 +1,32 @@
+.secondaryButtonContainer {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  transition: 400ms ease-in-out;
+}
+
+.secondaryButtonContainer:hover {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.secondaryButtonContainer > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.icon {
+  width: 1rem;
+  height: auto;
+}
