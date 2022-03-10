@@ -15,10 +15,26 @@ const Dashboard = () => {
   const [taskLists, setTaskLists] = useState([
     {
       id: 0,
-      title: "College Work",
+      title: "How it works?",
       tasks: [
         {
-          text: "Complete all the MERN Course Videos by 21-May-2018",
+          text: "Create a new list by using the sidebar.",
+          completed: false,
+        },
+        {
+          text: "You can edit the title of the list from the Heading as it is editable.",
+          completed: false,
+        },
+        {
+          text: "You can create a new task from the 'Create new Task' section.",
+          completed: false,
+        },
+        {
+          text: "You can click on the ckeck mark to mark the task as completed.",
+          completed: false,
+        },
+        {
+          text: "You can delete the task by clicking on the trash icon.",
           completed: false,
         },
       ],
@@ -37,6 +53,7 @@ const Dashboard = () => {
   }, [taskLists]);
 
   const createNewTask = () => {
+    if (newTask.trim() === "") return alert("Please enter a task");
     const task = {
       text: newTask,
       completed: false,

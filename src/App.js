@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Dashboard />} />
         <Route path="/:listId" element={<Dashboard />} />
         <Route path="*" element={<Navigate to="/0" />} />
       </Routes>
