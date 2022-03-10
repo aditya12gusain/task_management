@@ -5,7 +5,16 @@ import assets from "../../../assets";
 import SecondaryButton from "../../common/SecondaryButton/SecondaryButton";
 import NewListButton from "../../NewListButton/NewListButton";
 
-const Sidebar = ({ displayMenu }) => {
+const Sidebar = ({ displayMenu, taskLists, setTaskLists }) => {
+  const createNewList = () => {
+    const newList = {
+      id: taskLists.length,
+      title: "New List",
+      tasks: [],
+    };
+    setTaskLists([...taskLists, newList]);
+  };
+
   return (
     <div className={`${displayMenu ? null : "sidebarHidden"} sidebarContainer`}>
       <div className="sidebarHeader">
@@ -13,10 +22,10 @@ const Sidebar = ({ displayMenu }) => {
       </div>
       <section className="navigationSection">
         <div className="buttonContainer">
-          <NewListButton />
-          <SecondaryButton text="College Work" />
-          <SecondaryButton text="Daily Tasks And SOmeting" />
-          <SecondaryButton text="College Work" />
+          <NewListButton createNewList={createNewList} />
+          {taskLists.map((item) => (
+            <SecondaryButton key={item.id} text={item.title} id={item.id} />
+          ))}
         </div>
       </section>
     </div>

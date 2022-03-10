@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 // pages
 import Dashboard from "./pages/Dashborad";
@@ -9,6 +9,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Dashboard />} />
+        <Route path="/:listId" element={<Dashboard />} />
+        <Route path="*" element={<Navigate to="/0" />} />
       </Routes>
     </div>
   );
