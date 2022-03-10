@@ -65,7 +65,7 @@
   justify-content: space-between;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  width: 100%;
+  width: 100% !important;
   min-height: 40px;
 }
 
@@ -74,6 +74,7 @@
   border: none;
   background: transparent;
   outline: none;
+  width: 100% !important;
 }
 
 /* .createNewTaskInput button {
