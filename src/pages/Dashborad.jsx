@@ -115,7 +115,7 @@ const Dashboard = () => {
                   }}
                   value={newTask}
                   type="text"
-                  placeholder="Search"
+                  placeholder="Add something ..."
                 />
                 <PrimaryButton onClick={createNewTask} />
               </div>
