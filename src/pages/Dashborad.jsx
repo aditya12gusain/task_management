@@ -94,7 +94,7 @@ const Dashboard = () => {
                   border: "dashed 1px #e3e3e3",
                   fontWeight: "bold",
                   width: "100%",
-                  padding: "1rem",
+                  padding: "1rem !important",
                 }}
                 onChange={(e) => setListTitle(e.target.value)}
                 onKeyPress={(e) => {
