@@ -6,11 +6,19 @@ import assets from "../../../assets";
 // components
 import SearchInput from "../../SearchInput/SearchInput";
 
-const Topbar = () => {
+const Topbar = ({ displayMenu, setDisplayMenu }) => {
+  console.log(displayMenu);
   return (
     <div className="topbarContainer">
-      <button className="menuButton">
-        <img src={assets.hamburger} alt="menu" />
+      <button
+        className="menuButton"
+        onClick={() => setDisplayMenu(!displayMenu)}
+      >
+        {displayMenu ? (
+          <img src={assets.cross} alt="close" />
+        ) : (
+          <img src={assets.hamburger} alt="open" />
+        )}
       </button>
       <div className="topbarRightContainer">
         <SearchInput />

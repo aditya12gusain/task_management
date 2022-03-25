@@ -3,6 +3,8 @@
   align-items: flex-start;
   justify-content: flex-start;
   height: 100vh;
+  transition: all ease-in-out 400ms;
+  overflow: hidden;
 }
 
 .sidebarOpen {
@@ -10,7 +12,7 @@
 }
 
 .sidebarClosed {
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .mainContainer {
@@ -21,9 +23,10 @@
 
 .mainContent {
   background: var(--background-color);
-  height: 100%;
+  height: calc(100vh - 80px);
   padding: 3rem 3rem;
   border-top-left-radius: 15px;
+  overflow: auto !important;
 }
 
 @media screen and (max-width: 450px) {
@@ -43,7 +46,8 @@
 
 .addTaskCard {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
   background: white;
@@ -51,6 +55,40 @@
   border-radius: 15px;
   transition: 400ms ease-in-out;
   letter-spacing: 0.05rem;
+}
+
+.createNewTaskInput {
+  background: var(--background-color);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  width: 100% !important;
+  min-height: 40px;
+}
+
+.createNewTaskInput > input {
+  font-family: var(--poppins-font);
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100% !important;
+}
+
+/* .createNewTaskInput button {
+  background: var(--primary-color);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+} */
+
+.createNewTaskInput img {
+  height: 15px;
+  width: auto;
 }
 
 .addTaskCard:hover {
@@ -61,58 +99,4 @@
   .addTaskCard {
     flex: 1;
   }
-}
-
-.taskContainer {
-  background: var(--white-color);
-  margin: 1rem 0;
-  transition: 400ms ease-in-out;
-  padding: 1rem 2rem;
-  border-radius: 15px;
-  gap: 1rem;
-  font-size: 18px;
-  min-height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.taskContainer:hover {
-  filter: drop-shadow(0px 2px 27px rgba(0, 0, 0, 0.09));
-}
-
-.taskContainer > p {
-  flex: 1 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100px;
-}
-
-.taskButtonContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.taskButtonContainer > button {
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  padding: 0.5rem;
-}
-
-.taskButtonContainer > button > img {
-  width: 20px;
-}
-
-.completedButton {
-  border: 1px solid var(--lavender-color);
-  background: var(--lavender-color-transparent);
-}
-
-.deleteButton {
-  border: 1px solid var(--red-color);
-  background: var(--red-color-transparent);
 }
